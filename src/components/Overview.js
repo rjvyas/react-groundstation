@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import io from 'socket.io-client';
-let socket = io();
+// import io from 'socket.io-client';
+// let socket = io();
 
 class Overview extends Component {
 	constructor(props) {
@@ -21,7 +21,7 @@ class Overview extends Component {
 	componentDidMount() {
         var _this = this;
 
-		socket.on('server event', function (data) {
+		/*socket.on('server event', function (data) {
 	        console.log(data);
 	        socket.emit('client event', { socket: 'io connected' });
 	    });
@@ -37,7 +37,7 @@ class Overview extends Component {
 	        _this.setState({ 
 			    dataLogs: [data.log].concat(_this.state.dataLogs)
 			});
-	    });
+	    });*/
 	}
 
 	componentWillUnmount(){
@@ -45,42 +45,42 @@ class Overview extends Component {
         // This method is called immediately before the component is removed
         // from the page and destroyed. We can clear the interval here:
 
-        clearInterval(this.timer);
+        // clearInterval(this.timer);
     }
 
 	sendParameter(e) {
 		e.preventDefault();
-		socket.emit('sendParameter', { index: this.state.parameterIndex, type: this.state.parameterType, value: this.state.parameterValue });
+		// socket.emit('sendParameter', { index: this.state.parameterIndex, type: this.state.parameterType, value: this.state.parameterValue });
 	}
 	setIpAndPort(e) {
 		e.preventDefault();
-		socket.emit('setIpAndPort', { ip: this.state.ip,  port: this.state.port });
+		// socket.emit('setIpAndPort', { ip: this.state.ip,  port: this.state.port });
 	}
 
 	handleIpChange(e){
-		this.setState({ip: e.target.value})
+		// this.setState({ip: e.target.value})
 	}
 
 	handlePortChange(e){
-		this.setState({port: e.target.value})
+		// this.setState({port: e.target.value})
 	}
 
 	handleParameterIndexChange(e){
-		this.setState({parameterIndex: e.target.value})
+		// this.setState({parameterIndex: e.target.value})
 	}
 
 	handleParameterTypeChange(e){
-		this.setState({parameterType: e.target.value})
+		// this.setState({parameterType: e.target.value})
 	}
 
 	handleParameterValueChange(e){
-		this.setState({parameterValue: e.target.value})
+		// this.setState({parameterValue: e.target.value})
 	}
 
 	toggleDatalogging(e){
 		var _this = this;
 
-		if(e.target.value === 'Stop')
+		/*if(e.target.value === 'Stop')
 		{
 			console.log(this.timer)
 			this.setState({dataLogging: false});
@@ -91,7 +91,7 @@ class Overview extends Component {
 		{
 			this.setState({dataLogging: true});
 			socket.emit('start:dataLogs');
-		}
+		}*/
 	}
 
 	render() {
@@ -147,7 +147,7 @@ class Overview extends Component {
 							<br/>
 							update rate: {this.state.updateRate}ms
 							</div>
-							<div class="form-group">
+							<div className="form-group">
 								<input type="button" className="btn btn-danger col-xs-4" onClick={this.toggleDatalogging.bind(this)} value="Stop" />
 								<input type="button" className="btn btn-success col-xs-offset-2 col-xs-4" onClick={this.toggleDatalogging.bind(this)} value="Start" />
 							</div>

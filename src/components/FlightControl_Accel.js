@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import io from 'socket.io-client';
-let socket = io();
+// import io from 'socket.io-client';
+// let socket = io();
 
 class FlightControl_Accel extends Component {
 	constructor(props) {
@@ -13,55 +13,55 @@ class FlightControl_Accel extends Component {
 	componentDidMount() {
         var _this = this;
 
-		socket.on('server event', function (data) {
+		/*socket.on('server event', function (data) {
 	        console.log(data);
 	        socket.emit('client event', { socket: 'io connected' });
-	    });
+	    });*/
 	}
 
 	accelStartStream(e) {
 		e.preventDefault();
-		socket.emit('FlightControl_Accel:StartStream');
+		// socket.emit('FlightControl_Accel:StartStream');
 	}
 	accelStopStream(e) {
 		e.preventDefault();
-		socket.emit('FlightControl_Accel:StopStream');
+		// socket.emit('FlightControl_Accel:StopStream');
 	}
 	
 	accelZeroX0(e) {
 		e.preventDefault();
-		socket.emit('FlightControl_Accel:ZeroX0');
+		// socket.emit('FlightControl_Accel:ZeroX0');
 	}
 	accelZeroY0(e) {
 		e.preventDefault();
-		socket.emit('FlightControl_Accel:ZeroY0');
+		// socket.emit('FlightControl_Accel:ZeroY0');
 	}	
 	accelZeroZ0(e) {
 		e.preventDefault();
-		socket.emit('FlightControl_Accel:ZeroZ0');
+		// socket.emit('FlightControl_Accel:ZeroZ0');
 	}
 	
 	accelCoarse0(e) {
 		e.preventDefault();
-		socket.emit('FlightControl_Accel:Coarse0');
+		// socket.emit('FlightControl_Accel:Coarse0');
 	}
 	
 	accelZeroX1(e) {
 		e.preventDefault();
-		socket.emit('FlightControl_Accel:ZeroX1');
+		// socket.emit('FlightControl_Accel:ZeroX1');
 	}
 	accelZeroY1(e) {
 		e.preventDefault();
-		socket.emit('FlightControl_Accel:ZeroY1');
+		// socket.emit('FlightControl_Accel:ZeroY1');
 	}	
 	accelZeroZ1(e) {
 		e.preventDefault();
-		socket.emit('FlightControl_Accel:ZeroZ1');
+		// socket.emit('FlightControl_Accel:ZeroZ1');
 	}
 	
 	accelCoarse1(e) {
 		e.preventDefault();
-		socket.emit('FlightControl_Accel:Coarse1');
+		// socket.emit('FlightControl_Accel:Coarse1');
 	}
 	
 	

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import io from 'socket.io-client';
-let socket = io();
+// import io from 'socket.io-client';
+// let socket = io();
 
 class Stop extends Component {
 	constructor(props) {
@@ -13,15 +13,15 @@ class Stop extends Component {
 	componentDidMount() {
         var _this = this;
 
-		socket.on('server event', function (data) {
+		/*socket.on('server event', function (data) {
 	        console.log(data);
 	        socket.emit('client event', { socket: 'io connected' });
-	    });
+	    });*/
 	}
 
 	stopPod(e) {
 		e.preventDefault();
-		socket.emit('stop:Pod');
+		// socket.emit('stop:Pod');
 	}
 
 	render() {

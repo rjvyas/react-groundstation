@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import io from 'socket.io-client';
-let socket = io();
+//import io from 'socket.io-client';
+//let socket = io();
 
 class XilinxSim extends Component {
 	constructor(props) {
@@ -13,19 +13,19 @@ class XilinxSim extends Component {
 	componentDidMount() {
         var _this = this;
 
-		socket.on('server event', function (data) {
+		/*socket.on('server event', function (data) {
 	        console.log(data);
 	        socket.emit('client event', { socket: 'io connected' });
-	    });
+	    });*/
 	}
 
 	startRun(e) {
 		e.preventDefault();
-		socket.emit('XilinxSim:StartRun');
+		//socket.emit('XilinxSim:StartRun');
 	}
 	stopRun(e) {
 		e.preventDefault();
-		socket.emit('XilinxSim:StopRun');
+		//socket.emit('XilinxSim:StopRun');
 	}
 
 	render() {

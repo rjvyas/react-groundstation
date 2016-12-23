@@ -12,7 +12,7 @@ var listeningForUdp = false;
 /*
 * UDP data sender
 */
-var SENDPORT = 9100; //3003; // This points to the Pod's UDP listener port
+var SENDPORT = 3003; //3003; // This points to the Pod's UDP listener port
 var SENDHOST = '127.0.0.1';
 
 function sendMessageToPod(messageStr){
@@ -118,7 +118,7 @@ function Numerical_To_U16(u16Value, Object)
 /*
 * UDP data receiver
 */
-var udpPORT = 9100; //3002; // Groundsation's udp port
+var udpPORT = 3002; //3002; // Groundsation's udp port
 var udpHOST = '127.0.0.1';
 
 var udpServer = dgram.createSocket('udp4');

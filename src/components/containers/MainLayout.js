@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import {connect} from 'react-redux';
+
 
 class MainLayout extends Component {
 	render() {
@@ -67,7 +69,12 @@ class MainLayout extends Component {
 	}
 }
 
-export default MainLayout;
+MainLayout.propTypes = {
+  children: PropTypes.object
+};
 
+function mapStateToProps(state, ownPros) {
+  return state;
+}
 
-
+export default connect(mapStateToProps)(MainLayout);
