@@ -119,11 +119,6 @@ var charger = require('./charger')(rtDataStore);
   Adds some data to the real time data store for testing
   DISABLE FOR PRODUCTION
 ------------*/
-//const AccelTestDataGenerator = require('./DataGenerators/AccelTestDataGenerator.js')(packetParser);
-
-// const BrakeTestDataGenerator = require('./DataGenerators/BrakeTestDataGenerator.js')(packetParser);
-
-//Accelerometer packet generator
-// const payloads = require('./DataGenerators/TestPayloads');
-// const testGenerator = require('./DataGenerators/TestGenerator.js');
-// testGenerator(0x1003, payloads.accelerometer);
+// const AccelTestDataGenerator = require('./DataGenerators/AccelTestDataGenerator.js')();
+// const BrakeTestDataGenerator = require('./DataGenerators/BrakeTestDataGenerator.js')();
+// const BrakeTestDataGenerator = require('./DataGenerators/PowerNodeACurrentTempsTestDataGenerator.js')();
